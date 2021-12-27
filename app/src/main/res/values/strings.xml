@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Shoe Store Inventory</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_header">LOGIN</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_title">The Shoe Store Inventory</string>
+    <string name="to">To</string>
+    <string name="instructions_header">Instructions</string>
+    <string name="do_what_ever_you_want">Do what ever you want</string>
+    <string name="next">Next</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="navigate_to_shoe_detail_screen">Tap this buttoon to go to Shoe Detail Screen</string>
+    <string name="save">SAVE</string>
+    <string name="logout">Logout</string>
+</resources>
