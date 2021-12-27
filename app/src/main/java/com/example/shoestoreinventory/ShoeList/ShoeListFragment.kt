@@ -1,17 +1,17 @@
 package com.example.shoestoreinventory.ShoeList
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
-import com.example.shoestoreinventory.datastore.Shoe
 import com.example.shoestoreinventory.R
 import com.example.shoestoreinventory.databinding.FragmentShoeListBinding
+import com.example.shoestoreinventory.datastore.Shoe
 import kotlinx.android.synthetic.main.item_shoe.view.*
 
 /**
@@ -32,7 +32,6 @@ class ShoeListFragment : Fragment() {
         // Inflate the layout for this fragment
         shoeListBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_shoe_list,container,false)
         shoeListBinding.setLifecycleOwner(this)
-
         shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer { shoes ->
             shoes.forEach{addShoeToShoeListUI(it)}
         })
