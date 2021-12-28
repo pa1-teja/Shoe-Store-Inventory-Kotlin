@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<!--    Used Constraint Layout as its currently the best view group that stretches child views -->
+<!--    properly across the screen while maintainng the relative positioning of the views-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

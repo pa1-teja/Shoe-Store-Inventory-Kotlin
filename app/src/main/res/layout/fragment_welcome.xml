@@ -2,6 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+<!--    Layout View Group Reason: A simple layout with less number of views and child views
+        are positioned with respect to other child views and also the parent view
+
+         Added to AppCompatTextView, AppCompatButton and TextView to just see if there is any
+          difference visually
+         -->
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"

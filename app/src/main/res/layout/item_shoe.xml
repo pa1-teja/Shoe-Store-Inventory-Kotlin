@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--    Layout View Group Reason: Using Linear Layout to stack all the views vertically one on top of the other
+        on the screen-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
