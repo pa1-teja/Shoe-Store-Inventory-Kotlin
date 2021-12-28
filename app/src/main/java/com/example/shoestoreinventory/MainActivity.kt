@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.app_logout -> navController.navigate(R.id.loginFragment)
+            R.id.app_logout -> navController.popBackStack(R.id.loginFragment,false)
         }
       return super.onOptionsItemSelected(item)
     }
