@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.example.shoestoreinventory.R
 import com.example.shoestoreinventory.databinding.FragmentShoeListBinding
+import com.example.shoestoreinventory.databinding.ItemShoeBinding
 import com.example.shoestoreinventory.datastore.Shoe
 import kotlinx.android.synthetic.main.item_shoe.view.*
 
@@ -24,6 +25,7 @@ class ShoeListFragment : Fragment() {
 
     private val shoeListViewModel by activityViewModels<ShoeListViewModel>()
     private lateinit var shoeListBinding: FragmentShoeListBinding
+    private lateinit var shoeItemShoeBinding: ItemShoeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,13 +42,14 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun addShoeToShoeListUI(shoe: Shoe) {
-        val shoeItemLayout = layoutInflater.inflate(R.layout.item_shoe, shoeListBinding.shoeListLinearLayout, false)
+        shoeItemShoeBinding = DataBindingUtil.inflate<ItemShoeBinding>(layoutInflater,R.layout.item_shoe,shoeListBinding.shoeListLinearLayout,false)
 
-        shoeItemLayout.shoe_name_tv.text = shoe.shoeName ?: ""
-        shoeItemLayout.shoe_company_tv.text = shoe.shoeCompanyName ?: ""
-        shoeItemLayout.shoe_size_tv.text = shoe.shoeSize ?: ""
-        shoeItemLayout.shoe_description_tv.text = shoe.shoeDescription ?: ""
-        shoeListBinding.shoeListLinearLayout.addView(shoeItemLayout)
+        shoeItemShoeBinding.shoeNameTv.text = shoe.shoeName ?: ""
+        shoeItemShoeBinding.shoeCompanyTv.text = shoe.shoeCompanyName ?: ""
+        shoeItemShoeBinding.shoeSizeTv.text = shoe.shoeSize ?:""
+        shoeItemShoeBinding.shoeDescriptionTv.text = shoe.shoeDescription ?:""
+
+        shoeListBinding.shoeListLinearLayout.addView(shoeItemShoeBinding.root)
     }
 
 }

@@ -3,6 +3,7 @@ package com.example.shoestoreinventory
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -11,7 +12,7 @@ import androidx.navigation.ui.NavigationUI
 import com.example.shoestoreinventory.databinding.ActivityMainBinding
 
 
-class MainActivity : BaseActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var activityMainBinding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
